@@ -2,7 +2,7 @@ import React from 'react';
 
 const AccountControls = () => {
   return (
-    <div class="topnav">
+    <div className="topnav">
         <a href="#home" >Home</a>
         <a href="#liked">Collection</a>
 
