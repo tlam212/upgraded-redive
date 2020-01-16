@@ -42,11 +42,77 @@
   border-bottom: 3px solid black;
 }
 
+/* ---------------------BUTTON------------------------ */
+
+header {
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    /* background-attachment: fixed; */
+
+}
+
+.coverPageDiv {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: white;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color:#cf6d17;
+}
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #cf6d17;
+
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: white;
+
+}
+
 
 /* ------------------------IMAGECONTAINER---------------------- */
 
 .imgDiv{
-  margin-top: 40px;
+  margin-top: 60px;
 
 }
 h1 {
@@ -56,7 +122,7 @@ h1, h3 {
   font-family: 'Raleway', sans-serif;
 }
 .headers {
-  margin-top: 60px;
+  margin-top: 80px;
   margin-bottom: 80px;
 }
 

@@ -7,7 +7,7 @@ import AccountControls from '../presentation/AccountControls'
 class NavBar extends React.Component{
   render(){
     return(
-      <div className="navbar navbar-expand-lg ">
+      <div className="navbar fixed-top navbar-expand-lg " style={{background: "white"}}>
       <Logo />
       <AccountControls />
 
