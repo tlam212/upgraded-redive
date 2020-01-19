@@ -23,17 +23,17 @@ function App() {
 
 
   }
-console.log(collection)
+
   return (
 
     <div>
       <NavBar user={user}/>
 
+
       <Route exact path="/" render={() => <ImagesContainer images={images} addToCollection={addToCollection}/>}/>
       <Route exact path="/login" render={() => <LoginForm />}/>
       <Route exact path="/signup"  render={() => <SignUpForm />}/>
-
-      <Route exact path="/collection" render={() => <CollectionsContainer />}/>
+      <Route exact path="/collection" render={() => <CollectionsContainer images={collection}/>}/>
 
     </div>
 

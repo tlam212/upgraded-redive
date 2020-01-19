@@ -1,8 +1,12 @@
 import React from 'react'
+import ImagesContainer from '../container/ImagesContainer'
 
-const CollectionsContainer = () => {
+
+const CollectionsContainer = ({ images }) => {
   return (
-    <div>Inside the collections container</div>
+    <div>
+      <ImagesContainer collectionMode={true} images={images} />
+    </div>
   )
 }
 export default CollectionsContainer
