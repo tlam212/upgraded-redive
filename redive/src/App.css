@@ -23,7 +23,7 @@
 
 }
 
-.topnav a {
+.topnav {
   float: left;
   font-family: 'Raleway', sans-serif;
   color: black;
@@ -34,11 +34,11 @@
   border-bottom: 3px solid transparent;
 }
 
-.topnav a:hover {
+.topnav span:hover {
   border-bottom: 3px solid black;
 }
 
-.topnav a.active {
+.topnav span:active {
   border-bottom: 3px solid black;
 }
 
@@ -205,4 +205,12 @@ h1, h3 {
 
 .fadeIn-bottom{
   top: 80%;
+}
+
+
+/* -----------------------------------FORMS------------------------------------ */
+
+.formContainer {
+  
+  background-image: url(https://source.unsplash.com/Bj0LJahdZQo);
 }

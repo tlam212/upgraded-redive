@@ -1,12 +1,32 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
-const AccountControls = () => {
+const AccountControls = ({ user }) => {
+
   return (
-    <div className="topnav">
-        <a href="#home" >Home</a>
-        <a href="#liked">My Collection</a>
-        <a href="#liked">Login</a>
-        <a href="#liked">Sign up</a>
+    <div >
+        <Link to="/" ><span className="topnav">Home</span></Link>
+        {user && (
+          <Link to="/collection">
+          <span className="topnav">{user}'s collection</span>
+          </Link>
+        )}
+        {!user && (
+          <Link to="/login">
+            <span className="topnav">Log in</span>
+          </Link>
+        )}
+        {!user && (
+          <Link  to="/signup">
+            <span className="topnav">Sign up</span>
+          </Link>
+        )}
+        {user && (
+          <Link to="/">
+            <span className="topnav">Log out</span>
+          </Link>
+        )}
+
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ImageCard = ({ image }) => {
+const ImageCard = ({ image, addToCollection }) => {
   return(
     // <div className="imgcontainer">
         <div className="content">
@@ -9,7 +9,7 @@ const ImageCard = ({ image }) => {
             <div className="content-details fadeIn-bottom">
               <h4 className="content-title">{image.title}</h4>
               <p className="content-text">Artist: {image.artist_name}</p>
-              <button className="content-text">+</button>
+              <button className="content-text" onClick={() => addToCollection(image)}>+</button>
             </div>
         </div>
       // </div>

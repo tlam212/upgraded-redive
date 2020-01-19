@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 import ImageCard from '../presentation/ImageCard'
 
 
-class ImageContainer extends React.Component{
-  render(){
+const ImagesContainer =({ images, addToCollection })=>{
+
+
     return(
       <div className="imgDiv">
       <div className="headers">
@@ -11,11 +12,11 @@ class ImageContainer extends React.Component{
       <br/>
       <h3>Stunning images of the city that never sleeps.</h3>
       </div>
-        {this.props.images.map(image => {
-          return <ImageCard key={image.id}image={image} />
+        {images.map(image => {
+          return <ImageCard key={image.id}image={image} addToCollection={addToCollection}/>
         })}
     </div>
     )
-  }
+
 }
-export default ImageContainer
+export default ImagesContainer
