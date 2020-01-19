@@ -20,9 +20,12 @@ function App() {
 
   const addToCollection = (pic) => {
     setCollection([pic, ...collection])
-
-
   }
+
+  const removeImg = (imageID) => {
+    setCollection(collection.filter(image => image.id !== imageID))
+  }
+
 
   return (
 
@@ -33,7 +36,7 @@ function App() {
       <Route exact path="/" render={() => <ImagesContainer images={images} addToCollection={addToCollection}/>}/>
       <Route exact path="/login" render={() => <LoginForm />}/>
       <Route exact path="/signup"  render={() => <SignUpForm />}/>
-      <Route exact path="/collection" render={() => <CollectionsContainer images={collection}/>}/>
+      <Route exact path="/collection" render={() => <CollectionsContainer removeImg={removeImg} images={collection}/>}/>
 
     </div>
 

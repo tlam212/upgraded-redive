@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ImageCard = ({ image, addToCollection, collectionMode }) => {
+const ImageCard = ({ image, addToCollection, collectionMode, removeImg }) => {
   return(
     // <div className="imgcontainer">
         <div className="content">
@@ -9,8 +9,8 @@ const ImageCard = ({ image, addToCollection, collectionMode }) => {
             <div className="content-details fadeIn-bottom">
               <h4 className="content-title">{image.title}</h4>
               <p className="content-text">Artist: {image.artist_name}</p>
-              // if on collection page, add to collection button will be replaced by a delete button
-              {collectionMode ? <button>x</button> :
+              {collectionMode ? <button onClick={() => removeImg(image.id)}>x</button> :
+              // If on Collection page add button will be replaced with a delete button
               <button className="content-text" onClick={() => addToCollection(image)}>+</button>
               }
             </div>
