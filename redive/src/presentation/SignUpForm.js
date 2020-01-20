@@ -2,9 +2,11 @@ import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody, MDBIcon } from 'mdbreact';
 
 const SignUpForm = () => {
+
+  const [currentUser, setCurrentUser] = useState(null)
+
+
   return (
-
-
     <MDBContainer className="formContainer">
       <MDBRow>
         <MDBCol md="6">
